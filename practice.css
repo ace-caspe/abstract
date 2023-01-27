@@ -1,0 +1,59 @@
+/**
+ * Guide
+ */
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    Ubuntu, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.wrap {
+  position: relative;
+  width: 60vh;
+  display: block;
+}
+
+.wrap > img {
+  box-shadow: 0 0 20px #bac3c3;
+}
+
+.wrap > * {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.wrap::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: cyan;
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+  background-image: var(--image);
+  background-size: 200%;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrap::after {
+  bottom: 0;
+  right: 0;
+  background-position: right bottom;
+}
+
+.border {
+  top: 0;
+  position: absolute;
+  box-sizing: border-box;
+  border: 18px #e60023 solid;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(45deg);
+}
